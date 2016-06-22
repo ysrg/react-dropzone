@@ -36,8 +36,12 @@ var style = {
 
 var activeStyle = {
     borderStyle: 'solid',
-    backgroundColor: '#eee',
-    borderRadius: 8
+    borderColor: '#4FC47F'
+};
+
+var rejectStyle = {
+    borderStyle: 'solid',
+    borderColor: '#DD3A0A'
 };
 
 var DropzoneDemo = (function (_React$Component) {
@@ -104,9 +108,12 @@ var DropzoneDemo = (function (_React$Component) {
                 _react2['default'].createElement(
                     _reactDropzone2['default'],
                     { onDrop: this.onDrop.bind(this),
+                        accept: 'image/*',
                         style: style,
-                        activeStyle: activeStyle },
-                    'Try dropping some files here, or click to select files to upload.'
+                        activeStyle: activeStyle,
+                        rejectStyle: rejectStyle
+                    },
+                    'This dropzone accepts only images. Try dropping some here, or click to select files to upload.'
                 ),
                 this.showFiles()
             );
