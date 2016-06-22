@@ -5,4 +5,5 @@ logs
 # Dependency directory
 node_modules
 
-.idea
+# Compiled code
+dist
