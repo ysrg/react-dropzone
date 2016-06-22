@@ -15,8 +15,12 @@ const style = {
 
 const activeStyle = {
     borderStyle: 'solid',
-    backgroundColor: '#eee',
-    borderRadius: 8
+    borderColor: '#4FC47F'
+};
+
+const rejectStyle = {
+    borderStyle: 'solid',
+    borderColor: '#DD3A0A'
 };
 
 class DropzoneDemo extends React.Component {
@@ -65,9 +69,13 @@ class DropzoneDemo extends React.Component {
         return (
             <div>
                 <Dropzone onDrop={this.onDrop.bind(this)}
+                          accept="image/*"
                           style={style}
-                          activeStyle={activeStyle}>
-                    Try dropping some files here, or click to select files to upload.
+                          activeStyle={activeStyle}
+                          rejectStyle={rejectStyle}
+                >
+                    This dropzone accepts only images.
+                    Try dropping some here, or click to select files to upload.
                 </Dropzone>
                 {this.showFiles()}
             </div>
