@@ -393,6 +393,7 @@ export function useDropzone({
 
   const [state, dispatch] = useReducer(reducer, initialState)
   const { isFocused, isFileDialogActive, draggedFiles } = state
+  console.log('---xxx---', isFileDialogActive, inputRef)
 
   // Fn for opening the file dialog programmatically
   const openFileDialog = () => {
